@@ -1,0 +1,145 @@
+// Default variable overrides
+$theme-colors: (
+  "success": #00a6ab,
+);
+// Required
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Styling
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-weight: 600;
+}
+.wrapper {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(167, 211, 214, 0.4374124649859944) 100%
+  );
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #155458;
+  padding: 4rem 0;
+  h1 {
+    line-height: 2rem;
+  }
+  p {
+    margin: 2rem 0;
+  }
+  .landing-right {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    img {
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
+  .landing-left {
+    padding: 0 2rem;
+    width: 50%;
+    .landing-input {
+      width: 60%;
+    }
+  }
+}
+
+.promo-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 5rem;
+  color: #155458;
+  align-items: center;
+  .promo-left {
+    width: 40%;
+    .promo-button {
+      width: 50%;
+    }
+  }
+  .promo-right {
+    .item-orange {
+      color: #64502e;
+      background-color: #fdf5e8;
+      i {
+        color: #ffc200;
+      }
+    }
+    .item-green {
+      background-color: #e7f7f6;
+      i {
+        color: #00a6ab;
+      }
+    }
+    .promo-item {
+      display: flex;
+      border-radius: 15px;
+      padding: 1.5rem;
+      margin: 1.3rem;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+// Media Query
+
+@media only screen and (max-width: 992px) {
+  .hero {
+    flex-direction: column;
+    padding: 2rem 0;
+    .landing-left {
+      width: 80%;
+    }
+    .landing-right {
+      width: 80%;
+      padding: 2rem;
+    }
+  }
+  .promo-wrapper {
+    flex-direction: column;
+    .promo-left {
+      width: 80%;
+      .promo-button {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 565px) {
+  .hero {
+    justify-content: center;
+    .landing-left {
+      justify-content: center;
+      text-align: center;
+      .landing-input {
+        width: 100%;
+      }
+    }
+  }
+  .promo-wrapper {
+    .promo-left {
+      .promo-button {
+        width: 100%;
+      }
+    }
+  }
+}
